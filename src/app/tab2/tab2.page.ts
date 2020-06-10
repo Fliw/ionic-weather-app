@@ -8,7 +8,7 @@ import {NavigationExtras, Router} from '@angular/router';
     styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page implements OnInit {
-    public whList = Array();
+    public whList = [];
     constructor(private weatherService: WeatherService, private route: Router) {
     }
 

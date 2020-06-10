@@ -14,7 +14,6 @@ export class Tab1Page implements OnInit {
 
     constructor(private weatherService: WeatherService) {
         let fav = JSON.parse(localStorage.getItem('fav'));
-        console.log(fav);
     }
 
     ngOnInit(): void {
