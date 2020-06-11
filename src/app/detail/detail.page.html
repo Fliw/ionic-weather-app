@@ -1,29 +1,29 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-        </ion-buttons>
-        <ion-title>Weather forecast</ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Weather forecast</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Weather forecast</ion-title>
-        </ion-toolbar>
-    </ion-header>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Weather forecast</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-    <div id="container">
-        <h1 class="ion-60p">{{weather.temp}} &deg;C</h1>
+  <div id="container">
+    <h1 class="ion-60p">{{weather.temp}} &deg;C</h1>
 
-        <img src="http://openweathermap.org/img/wn/{{weather.icon}}@2x.png"/>
-        <h1 class="ion-30p">
-            {{weather.main}} <small>({{weather.desc}})</small><br />
-            <ion-icon name="calendar-outline"></ion-icon>
-            {{weather.date | date:'dd MMM yyyy - HH:mm'}}
-        </h1>
+    <img src="http://openweathermap.org/img/wn/{{weather.icon}}@2x.png"/>
+    <h1 class="ion-30p">
+      {{weather.main}} <small>({{weather.desc}})</small><br/>
+      <ion-icon name="calendar-outline"></ion-icon>
+      {{weather.date | date:'dd MMM yyyy - HH:mm'}}
+    </h1>
 
-        <ion-button (click)="save()">Favorite</ion-button>
-    </div>
+    <ion-button (click)="save()">Favorite</ion-button>
+  </div>
 </ion-content>

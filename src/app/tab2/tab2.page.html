@@ -1,36 +1,36 @@
 <ion-header [translucent]="true">
-    <ion-toolbar>
-        <ion-title>
-            Forecast
-        </ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Forecast
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
-    <ion-list>
-        <button>
-            <ion-item *ngFor="let w of whList">
-                <ion-grid (click)="detailpage(w)">
-                    <ion-row *ngFor="let d of w.weather">
-                        <ion-col size="2">
-                            <img src="http://openweathermap.org/img/wn/{{d.icon}}@2x.png" height="55px"/>
-                        </ion-col>
-                        <ion-col size="6">
-                            <ion-label>
-                                {{d.main}} - {{d.description}}<br/>
-                                <small>{{w.dt_txt|date:'dd MMM yyyy - HH:mm '}}</small>
-                            </ion-label>
-                        </ion-col>
-                        <ion-col size="4" class="ion-text-right">
-                            <ion-label color="success">
-                                {{w.main.temp}} &deg;C<br/>
-                                <small>{{w.main.temp_min}} ~ {{w.main.temp_max}} &deg;C</small>
-                            </ion-label>
-                        </ion-col>
-                    </ion-row>
-                </ion-grid>
-            </ion-item>
-        </button>
-    </ion-list>
+  <ion-list>
+    <button>
+      <ion-item *ngFor="let w of whList">
+        <ion-grid (click)="detailpage(w)">
+          <ion-row *ngFor="let d of w.weather">
+            <ion-col size="2">
+              <img src="http://openweathermap.org/img/wn/{{d.icon}}@2x.png" height="55px"/>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label>
+                {{d.main}} - {{d.description}}<br/>
+                <small>{{w.dt_txt|date:'dd MMM yyyy - HH:mm '}}</small>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4" class="ion-text-right">
+              <ion-label color="success">
+                {{w.main.temp}} &deg;C<br/>
+                <small>{{w.main.temp_min}} ~ {{w.main.temp_max}} &deg;C</small>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </button>
+  </ion-list>
 </ion-content>

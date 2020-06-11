@@ -23,20 +23,7 @@ export class DetailPage implements OnInit {
     }
 
     save() {
-        let fav = [];
-        let temp = JSON.parse(localStorage.getItem('fav'));
-
-        if (localStorage.length > 0){
-            // tslint:disable-next-line:prefer-for-of
-            for(let i=0; i<temp.length; i++){
-                console.log(temp[i]);
-                fav.push(temp[i]);
-            }
-        }
-
-        fav.push(this.weather);
-        localStorage.setItem('fav', JSON.stringify(fav));
-
+        localStorage.setItem('fav', JSON.stringify(this.weather));
     }
-
 }
+
