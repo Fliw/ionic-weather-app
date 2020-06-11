@@ -17,7 +17,10 @@
             <ion-icon name="time-outline"></ion-icon>
             {{fav.date|date:'HH:mm '}}
           </ion-col>
-          <ion-col size="6">
+          <ion-col size="2">
+            {{fav.temp}} &deg;C
+          </ion-col>
+          <ion-col size="4">
             <ion-label>
               {{fav.main}} <br/> {{fav.desc}}
             </ion-label>
