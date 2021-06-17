@@ -14,7 +14,7 @@ export class WeatherService {
     }
 
     getData() {
-        return this.http.get(`${this.url}weather?q=${this.city}&appid=${this.key}&units=metric`);
+        return this.http.get<any>(`${this.url}weather?q=${this.city}&appid=${this.key}&units=metric`);
     }
 
     getForecast() {
